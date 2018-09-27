@@ -9,10 +9,21 @@ function simpleOperators (numberA, numberB) {
   console.log(multiply);
   console.log(divide);
 }
+//Skipcount by ___ for ___ times starting at ___
+function skipCounting (skipCount, times, startingNumber){
+  let number = startingNumber;
+  console.log(number);
+  for (let i=1; i<=times; i++){
+    number += skipCount;
+    console.log(number);
+  }
+}
 
 let number = [4, 7, 28, 10];
 simpleOperators (number[0], number[1]);
 simpleOperators (number[2], number[3]);
+skipCounting (3, 6, 113);
+skipCounting (8, 11, -351);
 
 /*
 let skipCount = 0; // skip count by 2's to 10
@@ -31,9 +42,11 @@ for (let i=1; i<=5; i++){
 }
 */
 
+/*
 let MskipCount = 15; // skip count by
 console.log(MskipCount);
 for (let i=1; i<=5; i++){
   MskipCount *= 3;
   console.log(MskipCount);
 }
+*/

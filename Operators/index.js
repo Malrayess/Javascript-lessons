@@ -19,11 +19,36 @@ function skipCounting (skipCount, times, startingNumber){
   }
 }
 
+// simpleComparison
+function howManyTimes (numberStart, numberEnd, skipCount) {
+  while (numberStart < numberEnd) {
+    console.log(numberStart += skipCount);
+  }
+}
+//truth vs. falsy example
+console.log(1 == 1); // returns true
+console.log('1' == 1); // returns true
+console.log('1' === 1); // returns false
+
+
+//let number = [4, 7, 28, 10, 0, 100, 5];
+
+//howManyTimes (number[4], number[5], number[6]);
+/* // This is a broken code, infinite loop
+while (number <= 100) {
+  let number = 0
+  console.log(number);
+  number += 5;
+}
+*/
+
+/*
 let number = [4, 7, 28, 10];
 simpleOperators (number[0], number[1]);
 simpleOperators (number[2], number[3]);
 skipCounting (3, 6, 113);
 skipCounting (8, 11, -351);
+*/
 
 /*
 let skipCount = 0; // skip count by 2's to 10

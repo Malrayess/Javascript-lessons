@@ -32,7 +32,7 @@ for (let i=0; i<=difference; i++) { //starting at 0 and less then or = to the di
   console.log("This number is", even, "; This iteration is number", i+skipCount); //Example of Concatenating
 }
 console.log("There are ", counterE, " even numbers"); // logs in how many even numbers there are
-console.log("There are ", counterO, " even numbers"); // logs in how many odd numbers there are
+console.log("There are ", counterO, " odd numbers"); // logs in how many odd numbers there are
 
 console.log("These are the even numbers: "); // logs in this statement
 for (let a=0; a<counterE; a++) { // starting at 0 and less then the counter of even numbers adding by ones

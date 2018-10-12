@@ -1,21 +1,13 @@
-//Variable is an array for security
-const marks = []; //add grades as an array
+checkSpeed (); //add value here
 
-//Use the calculatedGrade function as an output to the console
-//Note: example of using functions more than once (calculateAverage is used in console.log and calculatedGrade)
-console.log ("My letter grade is", calculatedGrade (average), "because my numerical average is", calculateAverage (marks));
+function checkSpeed (speed) {
+  speedLimit = ; //add value here, remember to initialize with constant not let for security purposes
+  kmPerPoint = ; //add value here
+  if (speed <= ) return console.log ('Ok'); //Add formula for calculating the acceptable speed from above variables
+  //after return, none of the other code will run, there is no need to report demerit points
 
-//This function uses another function, call Single Concern Function (able to use either function for various purposes)
-function calculatedGrade (marks) {
-  const average = calculateAverage (marks);
-  if (average < 60) return ''; //Add appropriate grade or feedback
-  if () return ''; //Add approriate conditional
-  if () return '';
-  if () return '';
-  return A; //This is the last grade left, using the funnel image (metaphor)
-}
-function calculteAverage (array) {
-  let sum = 0;
-  for (let mark of marks) sum += mark; //Example of reading an array and one line to add up the sum of all the grades
-  return sum / marks.length; //"Divide the total marks by the number of grades"
+  // This variable and formula are const (constant) for security so it cannot be changed, for example when cross-scripting
+  const points = Math.floor (); //Add formula for calculating the point demerits
+  if () return console.log ('License Suspended'); //Add conditional to check for points to suspend license
+  else console.log ('Points', points)
 }

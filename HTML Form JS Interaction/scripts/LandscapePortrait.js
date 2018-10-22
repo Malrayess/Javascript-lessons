@@ -14,7 +14,7 @@ function testNaN (number) {
 
 function geometry (width, height) { //notice these parameters
   if (width == height) return 'Square'; //must be first, return will not allow rest of code to run
-  return (width < height) ? 'Landscape' : 'Portrait'; //ternary operator example
+  return (width > height) ? 'Landscape' : 'Portrait'; //ternary operator example
   //seems odd, the inequality, here, is reading the opposite
 }
 

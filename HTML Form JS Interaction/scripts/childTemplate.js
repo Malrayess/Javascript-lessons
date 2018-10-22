@@ -1,6 +1,7 @@
 console.log("I made it to childTemplate.js!"); //Debugging line to console ensuring JavaScript Link
 
 function main () {
+
   let firstNumber, secondNumber, text;
 
   //get the value of the width input field, id="textfield1"
@@ -19,8 +20,8 @@ function main () {
 
   if (stop == true) {
     document.getElementById("large").innerHTML = "Restart because I said said so." //Change to more appropriate
-  } else {
-    console.log("What did you say", geometry (firstNumber, secondNumber)); //difference between calling functions with arguement and sending to parameter's, local variables
+  } else {  //difference between calling functions with arguement and sending to parameter's, local variables
+    console.log("What did you say", geometry (firstNumber, secondNumber));
     document.getElementById("large").innerHTML = "What did you say " + geometry (firstNumber, secondNumber);
   }
 }

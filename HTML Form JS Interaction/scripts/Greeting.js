@@ -37,7 +37,7 @@ function main() {
   document.getElementById("validityTest1").innerHTML = testNaN (timern);
 
   if (stop == true) {
-    document.getElementById("large").innerHTML = "Restart because I said said so." //Change to more appropriate
+    document.getElementById("large").innerHTML = "Restart because I said so." //Change to more appropriate
   } else {
     console.log("The time is: ", time(timern)); //difference between calling functions with arguement and sending to parameter's, local variables
     document.getElementById("large").innerHTML = "Your time is: " + time(timern) + ".";

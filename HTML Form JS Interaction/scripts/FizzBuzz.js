@@ -1,4 +1,4 @@
-//console.log("I made it to FizzBuzz!"); //Debugging line to console ensuring JavaScript Link
+//console.log("I made it to FizzBuzz.js!"); //Debugging line to console ensuring JavaScript Link
 
 let stop = false;
 
@@ -32,7 +32,7 @@ function main() {
   document.getElementById("validityTest1").innerHTML = testNaN (firstNumber);
 
   if (stop == true) {
-    document.getElementById("large").innerHTML = "Restart because I said said so." //Change to more appropriate
+    document.getElementById("large").innerHTML = "Restart because I said so." //Change to more appropriate
   } else {
     console.log("Your message is: ", fizzBuzz(firstNumber)); //difference between calling functions with arguement and sending to parameter's, local variables
     document.getElementById("large").innerHTML = "Your message is: " + fizzBuzz(firstNumber) + "!";

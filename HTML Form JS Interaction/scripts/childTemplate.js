@@ -19,7 +19,7 @@ function main () {
   document.getElementById("validityTest2").innerHTML = testNaN (secondNumber);
 
   if (stop == true) {
-    document.getElementById("large").innerHTML = "Restart because I said said so." //Change to more appropriate
+    document.getElementById("large").innerHTML = "Restart because I said so." //Change to more appropriate
   } else {  //difference between calling functions with arguement and sending to parameter's, local variables
     console.log("What did you say", geometry (firstNumber, secondNumber));
     document.getElementById("large").innerHTML = "What did you say " + geometry (firstNumber, secondNumber);

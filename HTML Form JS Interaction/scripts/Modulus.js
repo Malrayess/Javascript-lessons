@@ -14,8 +14,6 @@ function testNaN (number) {
 
 let number = [2, 25, 0]; //Boundary Numbers
 let skipCount = 3; //Number of skipCounting between each element of the sequence, used in FOR Loop
-let difference = number[1] - number[0]; //Difference, mandatory expectation
-console.log(difference);
 let startingNumber = number[0]; //Hint: used in the FOR Loop
 let result = "";
 let counterO = 0;
@@ -47,8 +45,8 @@ for (let i=0; i<=difference; i++) { //starting at 0 and less then or = to the di
   }
   return "This number is", even, "; This iteration is number", i+skipCount; //Example of Concatenating
 }
-return "There are ", counterE, " even numbers"; // logs in how many even numbers there are
-return "There are ", counterO, " odd numbers"; // logs in how many odd numbers there are
+return "There are " + counterE + " even numbers , and there are " + counterO + " odd numbers"; // logs in how many even numbers there are
+ // logs in how many odd numbers there are
 }
 
 function displaynumbersets () {
@@ -61,15 +59,17 @@ function displaynumbersets () {
     return arrO[a]; // logs in the odd numbers
   }
 }
+
 // This coding illustrates the advanced method
 function main() {
-  let firstNumber, secondNumber, thirdNumber, fourthNumber, text;
+  let firstNumber, secondNumber, text;
 
   //get the value of the speed input field, id="textfield1"
   firstNumber = document.getElementById("textfield1").value;
   secondNumber = document.getElementById("textfield2").value;
-  thirdNumber = document.getElementById("textfield3").value;
-  fourthNumber = document.getElementById("textfield4").value;
+
+  number[0] = parseInt (firstNumber);
+  number[1] = parseInt (secondNumber);
 
   //validate if user typed a number, odd validation by TRUE Conditional
   document.getElementById("validityTest1").innerHTML = alert ( testNaN (firstNumber) );
@@ -79,19 +79,14 @@ function main() {
   document.getElementById("validityTest2").innerHTML = alert ( testNaN (secondNumber) );
   document.getElementById("validityTest2").innerHTML = testNaN (secondNumber);
 
-  //validate if user typed a number, odd validation by TRUE Conditional
-  document.getElementById("validityTest3").innerHTML = alert ( testNaN (thirdNumber) );
-  document.getElementById("validityTest3").innerHTML = testNaN (thirdNumber);
-
-  //validate if user typed a number, odd validation by TRUE Conditional
-  document.getElementById("validityTest4").innerHTML = alert ( testNaN (fourthNumber) );
-  document.getElementById("validityTest4").innerHTML = testNaN (fourthNumber);
-
   if (stop == true) {
     document.getElementById("large").innerHTML = "Restart because I said so." //Change to more appropriate
   } else {
-    console.log(evenorodd(firstNumber, secondNumber, thirdNumber, fourthNumber)); //difference between calling functions with arguement and sending to parameter's, local variables
-    document.getElementById("large").innerHTML = evenorodd(firstNumber, secondNumber, thirdNumber, fourthNumber);
+    console.log(evenorodd()); //difference between calling functions with arguement and sending to parameter's, local variables
+
+    document.getElementById("Difference").innerHTML = "The difference between the two numbers is equal to " + (number[1] - number[0]);
+
+    document.getElementById("large").innerHTML = evenorodd();
 
     console.log(counters(firstNumber, secondNumber, thirdNumber, fourthNumber)); //difference between calling functions with arguement and sending to parameter's, local variables
     document.getElementById("large").innerHTML = counters(firstNumber, secondNumber, thirdNumber, fourthNumber);

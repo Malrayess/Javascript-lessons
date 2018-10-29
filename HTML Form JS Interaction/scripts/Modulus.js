@@ -33,7 +33,8 @@ return result; //consoles the message result: odd or even
 }
 
 function counters () {
-for (let i=0; i<=difference; i++) { //starting at 0 and less then or = to the difference adding by ones
+let result = "";
+for (let i=0; i<=(number[1] - number[0]); i++) { //starting at 0 and less then or = to the difference adding by ones
   even = (startingNumber += skipCount) % 2; // defines even and the modulus portion of the sequence
   if (even == 0) { // if even equals 0
     arrE[counterE] = startingNumber; // fills the even number array with even numbers
@@ -43,21 +44,23 @@ for (let i=0; i<=difference; i++) { //starting at 0 and less then or = to the di
     arrO[counterO] = startingNumber; // fills the odd number array with odd numbers
     counterO += 1; // increases the odd number counter by 1
   }
-  return "This number is", even, "; This iteration is number", i+skipCount; //Example of Concatenating
+  result += "This number is" + even + "; This iteration is number" + (i+skipCount) + ", "; //Example of Concatenating
 }
-return "There are " + counterE + " even numbers , and there are " + counterO + " odd numbers"; // logs in how many even numbers there are
+return result + "</br></br> There are " + counterE + " even numbers , and there are " + counterO + " odd numbers"; // logs in how many even numbers there are
  // logs in how many odd numbers there are
 }
 
 function displaynumbersets () {
-  return "These are the even numbers: "; // logs in this statement
+  let result = "";
+  result += "These are the even numbers: "; // logs in this statement
   for (let a=0; a<counterE; a++) { // starting at 0 and less then the counter of even numbers adding by ones
-    return arrE[a]; // logs in the even numbers
+    result += arrE[a] + ", "; // logs in the even numbers
   }
-  return "These are the odd numbers: ";  // logs in this statement
+  result += "</br> These are the odd numbers: ";  // logs in this statement
   for (let a=0; a<counterO; a++) { // starting at 0 and less then the counter of odd numbers adding by ones
-    return arrO[a]; // logs in the odd numbers
+    result += arrO[a] + ", "; // logs in the odd numbers
   }
+  return result;
 }
 
 // This coding illustrates the advanced method
@@ -88,10 +91,9 @@ function main() {
 
     document.getElementById("large").innerHTML = evenorodd();
 
-    console.log(counters(firstNumber, secondNumber, thirdNumber, fourthNumber)); //difference between calling functions with arguement and sending to parameter's, local variables
-    document.getElementById("large").innerHTML = counters(firstNumber, secondNumber, thirdNumber, fourthNumber);
+    document.getElementById("counters").innerHTML = counters ();
 
-    console.log(displaynumbersets(firstNumber, secondNumber, thirdNumber, fourthNumber)); //difference between calling functions with arguement and sending to parameter's, local variables
-    document.getElementById("large").innerHTML = displaynumbersets(firstNumber, secondNumber, thirdNumber, fourthNumber);
+    document.getElementById("numbersets").innerHTML = displaynumbersets ();
+
   }
 }
